@@ -1,0 +1,20 @@
+version: '3.8'
+services:
+  # ส่วนของ Web Server
+  web:
+    build: .
+    ports:
+      - "8080:80"
+    volumes:
+      - ./src:/var/www/html
+    depends_on:
+      - db
+  # ส่วนของฐานข้อมูล MySQL
+  db:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: final_db_41970389  # <--- แก้เป็นรหัสนักศึกษาตัวเอง
+    ports:
+      - "3306:3306"
