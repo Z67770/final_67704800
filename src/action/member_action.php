@@ -24,4 +24,3 @@ if ($action == 'delete') {
     $res = $stmt->execute([$_POST['id']]);
     echo json_encode(['status' => $res]);
 }
-?>

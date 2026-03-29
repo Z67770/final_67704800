@@ -15,6 +15,6 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: final_db_41970389  # <--- แก้เป็นรหัสนักศึกษาตัวเอง
+      MYSQL_DATABASE: final_db_67704800  
     ports:
       - "3306:3306"
